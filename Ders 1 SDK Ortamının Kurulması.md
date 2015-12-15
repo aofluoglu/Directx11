@@ -1,15 +1,31 @@
+<<<<<<< HEAD
 #Win32 Penceresinin oluşturulması
+=======
+#Directx11' e Giriş
+
+Merhaba arkadaşlar C/C++ dersleri devam ederken aynı zaman da vaktimin yettiğince directx11 anlatmaya çalışacağım.
+>>>>>>> 92b23ef55abc524b180d5cf57244291e892b514d
 
 Merhaba arkadaşlar bugün Directx’ e giriş yapıyoruz. Kodlarımızı yazarken bir framework yapısı oluşturmaya çalışacağız bu sayede daha anlaşılır kodlar ve ürettiğimiz sınıfları daha hızlı deneme imkanı elde edeceğiz.
 
+<<<<<<< HEAD
 Kodların her birini dersi hazırlarken elimle yazdığım için bazı yazım hataları olabilir onları bana bildirirseniz sevinirim.
 Aynı zamanda buradaki dersleri github hesabım üzerinden de visual studio projeleri ile birikte yayınlayacağım. Ordan da takip edebilirsiniz.
+=======
+##Directx Nedir?
+Directx, Microsoft’ un video oyunları başta olmak üzere çoklu ortam yazılımlarını rahat, hızlı ve uyumlu şekilde hazırlayabilmek için yarattığı bir API yazılım programlama arayüzüdür. Şu andaki en güncel resmi sürümü Directx12′ dir.
+>>>>>>> 92b23ef55abc524b180d5cf57244291e892b514d
 
 
+<<<<<<< HEAD
 Bugünkü dersimizde bir tane win32 windows penceresini oluşturacağız.
+=======
+[Directx SDK](https://www.microsoft.com/en-us/download/details.aspx?id=6812)
+>>>>>>> 92b23ef55abc524b180d5cf57244291e892b514d
 
 ##Framework
 
+<<<<<<< HEAD
 Gördüğünüz gibi yapımız bu şekilde başlayacak olup ileriki derslerde de üzerine koyacağız. Öncelikle class yapısını küçük bir anlatayım.
 
 - Input classı bizim klavye işlemlerimizi yapıcak olan class.
@@ -20,6 +36,22 @@ Gördüğünüz gibi yapımız bu şekilde başlayacak olup ileriki derslerde de
 Ben her dosya içine kütüphane dosyalarını yazmamak için bir tane header dosyası oluşturup gerekli .lib dosyalarını , .h dosyaları, define tanımlamalarını bu dosya içine yapıyorum.
 
 ###Resource.h
+=======
+##Kurulum
+
+Öncelikle Visual Studio ortamını açıp File->New->Project diyerek yeni bir C++ projesi oluşturunuz.
+Daha sonra “Solution Explorer” kısmında proje ismine sağ tıklayıp “Properties” kısmına tıklayın.
+“Configuration” kısmını “Active(Debug)”, “Platform” ise “Active(Win32)” yapınız.
+“Configuration Properties” kısmından “VC++ Directories” kısmına tıklayınız.
+“Include Directories” kısmına gelin kenarda açılan oka tıklayıp edit kısmına basın.
+
+![0](images/ders 1/Ekran-Görüntüsü-44-300x214.png)
+
+Üstteki “New Line” Kısmına tıklayın. Ve açılan kısımda … olan buton var ona basın.
+![0](images/ders 1/Ekran-Görüntüsü-45-300x212.png)
+
+![0](images/ders 1/Ekran-Görüntüsü-46-300x214.png)
+>>>>>>> 92b23ef55abc524b180d5cf57244291e892b514d
 
 //
 // Win32 Header Dosyaları
@@ -43,6 +75,7 @@ Ben her dosya içine kütüphane dosyalarını yazmamak için bir tane header do
 Resource.h Dosyamız şimdilik bu kadar yeri geldikçe buraya eklemeler yapacağız.
 Şimdi ise geçelim Input sınıfımıza..
 
+<<<<<<< HEAD
 ###Input.h
 
 Dediğimiz gibi Input sınıfında klavye işlemlerimizi yapacağız. Hangi tuşlara basıldığını anlamamız için bir dizimiz bulunuyor. BOOL_KEYS uzunluğunda. Eğer tuşa basıldıysa dizideki değerini true yapıyoruz. Basılı değil ise false olarak bırakıyoruz. Bu şekilde hangi tuş veya tuşlara basıldığını anlıyoruz.
@@ -560,3 +593,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, PSTR cmdShowLin
     core = NULL;
     return 0;
 }
+=======
+##Egzersiz
+
+- Örnek olarak SDK dosyası içerisindeki bazı kodları çalıştırıp bakabilirsiniz. \Samples\C++\Direct3D11\Tutorials
+>>>>>>> 92b23ef55abc524b180d5cf57244291e892b514d
