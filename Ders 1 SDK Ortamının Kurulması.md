@@ -20,6 +20,7 @@ Daha sonra “Solution Explorer” kısmında proje ismine sağ tıklayıp “Pr
 “Configuration” kısmını “Active(Debug)”, “Platform” ise “Active(Win32)” yapınız.
 “Configuration Properties” kısmından “VC++ Directories” kısmına tıklayınız.
 “Include Directories” kısmına gelin kenarda açılan oka tıklayıp edit kısmına basın.
+
 ![0](images/ders 1/Ekran-Görüntüsü-44-300x214.png)
 
 Üstteki “New Line” Kısmına tıklayın. Ve açılan kısımda … olan buton var ona basın.
