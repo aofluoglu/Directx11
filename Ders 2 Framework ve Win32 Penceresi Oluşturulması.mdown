@@ -23,21 +23,21 @@ Ben her dosya içine kütüphane dosyalarını yazmamak için bir tane header do
 
 //
 // Win32 Header Dosyaları
-#include <Windows.h> 
+//#include <Windows.h> 
 // Win32 işlemleri için header dosyamız.
  
 //
 // Define
-#define WIN32_LEAN_AND_MEAN 
+//#define WIN32_LEAN_AND_MEAN 
 // Bu tanımlama şuan için gerekli
 // değil ama bulunmasında fayda var
 // bu tanım belirli win32 fonksiyonlarını ve kütüphanelerini 
 // Projede derlenmesini sağlıyor.
-#define BOOL_KEYS 256 
+//#define BOOL_KEYS 256 
 // Input sınıfımız da bu kısma geleceğiz.
 // Klavyedeki tuşların sayısı temsil ediyor.
-#define SCREEN_DEPTH_1000 1000.0f
-#define SCREEN_NEAR_0001 0.1f
+//#define SCREEN_DEPTH_1000 1000.0f
+//#define SCREEN_NEAR_0001 0.1f
 // Bunlar ise görülebilecek en yakın
 // ve en uzak uzaklık değerleri
 Resource.h Dosyamız şimdilik bu kadar yeri geldikçe buraya eklemeler yapacağız.
@@ -49,12 +49,12 @@ Dediğimiz gibi Input sınıfında klavye işlemlerimizi yapacağız. Hangi tuş
 
 Input.h
 
-#pragma once
+//#pragma once
  
-#ifndef INPUT_H
-#define INPUT_H
+//#ifndef INPUT_H
+//#define INPUT_H
  
-#include "Resource.h" 
+//#include "Resource.h" 
 // Hazırladığımız header 
 // dosyasını çağırıyorum.
  
@@ -82,7 +82,7 @@ class Input {
          
 };
  
-#endif //!INPUT_H
+//#endif //!INPUT_H
 
 ###Input.cpp
 
@@ -90,7 +90,7 @@ Class dosyasımızı hazırladık şimdi fonksiyonlarımızı yazalım. Olduğun
 
 Input.cpp
 
-#include "Input.h"
+//#include "Input.h"
  
 Input :: Input() {
 }
@@ -129,12 +129,12 @@ bool Input :: IsKeyDown(unsigned int _key) {
 
 Graphics.h
 
-#pragma once
+//#pragma once
  
-#ifndef GRAPHICS_H
-#define GRAPHICS_H
+//#ifndef GRAPHICS_H
+//#define GRAPHICS_H
  
-#include "Resource.h"
+///#include "Resource.h"
  
 const bool IsFullScreen  = false;
 // Pencerenin Tam ekran veya
@@ -168,16 +168,16 @@ class Graphics {
         // yapacak olan fonksiyon..
 };
  
-#endif //!GRAPHICS_H
+//#endif //!GRAPHICS_H
 
-###Graphics.cpp
 
 Class dosyası bu kadar şimdi class fonksiyonlarımızı yazalım.
 
 ###Graphics.cpp
 
 
-#include "Graphics.h"
+Graphics.cpp
+//#include "Graphics.h"
  
 Graphics :: Graphics() {
 }
@@ -212,14 +212,14 @@ Pencere özelliklerini belirlediğimiz bir sınıfımız olacak. Pencere iconu, 
 
 Core.h
 
-#pragma once
+//#pragma once
  
-#ifndef CORE_H 
-#define CORE_H
+//#ifndef CORE_H 
+//#define CORE_H
  
-#include "Input.h"
-#include "Graphics.h"
-#include "Resource.h"
+//#include "Input.h"
+//#include "Graphics.h"
+//#include "Resource.h"
  
 static LRESULT CALLBACK WndProc(
     HWND,
@@ -279,7 +279,7 @@ class Core {
  
 static Core* p_ApplicationHandle;
  
-#endif // !CORE_H 
+//#endif // !CORE_H 
 Burda anlatmamız gereken önemli bir nokta var fark ettiğseniz WndProc ve MessageHandler fonksiyonlarının başında CALLBACK diğe bir çağırım var.
 
 CALLBACK aslında windowsun bir fonksiyon çağırım mekanizmasıdır.(Function Calling Convention) Peki Nedir bu fonksiyon çağırım merkezi. Bu fonksiyon bir kod parçasından bir kaç parametre alacak ve windows tarafından çağırılıp sonuç olarak bir çıktı üretecektir. Fonksiyona parametre geçirebilmek için duruma göre registerlar veya stacklar kullanılır. Fakat bazı durumlarda parametrelerin stack üzerinde nasıl yer aldığını bilmemiz gerekir. İşte bu bilgileri bize fonksiyon çağırım merkezi belirler.
@@ -288,9 +288,9 @@ CALLBACK aslında windowsun bir fonksiyon çağırım mekanizmasıdır.(Function
 
 Şimdi geldi sıra fonksiyonlarımızı yazmaya. Bu kısım bizim penceremizi her şeyiyle oluşturacak olan kısım.
 
-###Core.cpp
+Core.cpp
 
-#include "Core.h"
+//#include "Core.h"
  
 Core :: Core() {
     p_AppInput             = NULL;
@@ -539,9 +539,9 @@ Evet Class yapılarımıza ait bütün fonksiyonlar şimdilik bu kadar. Artık b
 Şimdi ana fonksiyonumuzu yazalım.
 
 ###WinMain.cpp
-S
-#include "Resource.h"
-#include "Core.h"
+
+//#include "Resource.h"
+//#include "Core.h"
  
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, PSTR cmdShowLine, int cmdShow){
     Core* core;
