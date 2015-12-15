@@ -59,10 +59,10 @@ Input.h
 // dosyasını çağırıyorum.
  
 class Input {
+    
     public:
         Input();   
-        ~Input(); 
-     
+        ~Input();
         void Initialize(); 
         // Elimizdeki dizi elemanlarını
         // false' a setleyecek fonksiyon.
@@ -148,9 +148,9 @@ const float ScreenNear   = SCREEN_NEAR_0001;
  
 class Graphics {
     public:
+    
         Graphics();
         ~Graphics();
- 
         bool Initialize(int, int, HWND);
         // Ekran setlemelerini yapacak olan fonksiyon.
         // Directx penceresinin hangi pencerede
